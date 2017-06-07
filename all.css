@@ -1,0 +1,269 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+i{
+	font-style: normal;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+
+ /*----------首页的样式--------*/
+.index{
+	background: #fbf8ff;
+	position: relative;
+	padding-bottom: 1rem;
+}
+.shop_list{
+	width: 100%;
+	height:2.34rem;
+	background: #fff;
+	margin-bottom: 0.3rem;
+	padding: 0 0.3rem;
+	border:1px solid #e5e5e5;
+	border-left:0;
+	border-right: 0;
+}
+.shop_list_mess{
+	height: 1.45rem;
+	border-bottom: 1px solid #e5e5e5;
+	padding-top: 0.3rem;
+}
+.shop_list p{
+	font-size: 0.3rem;
+	color:#333;
+	line-height:0.5rem;
+}
+.shop_list p i{
+	font-size: 0.24rem;
+	color:#666;
+	float: right;
+}
+.shop_list_status li{
+	font-size: 0.26rem;
+	color:#666;
+	float: right;
+	line-height: 0.84rem;
+}
+.shop_list_status li:nth-of-type(1){
+	float: left;
+}
+.shop_status_shanchu i{
+	width: 0.32rem;
+	height: 0.35rem;
+	display: block;
+	background: url(img/icon.png) no-repeat -5.76rem -1.44rem;
+	background-size: 8.64rem;
+	float: left;
+	margin: 0.26rem 0.1rem 0 0.4rem;
+}
+.shop_status_xiugai i{
+	width: 0.35rem;
+	height: 0.34rem;
+	display: block;
+	background: url(img/icon.png) no-repeat -4.32rem -1.44rem;
+	background-size: 8.64rem;
+	float: left;
+	margin: 0.26rem 0.1rem 0 0.4rem;
+}
+.shop_status_shenhe i{
+	width: 0.35rem;
+	height: 0.33rem;
+	display: block;
+	/*background: pink;*/
+	float: left;
+	margin: 0.26rem 0.1rem 0 0;
+}
+.shenhezhong{
+	width: 0.35rem;
+	height: 0.33rem;
+	display: block;
+	background: url(img/icon.png) no-repeat 0 -1.44rem;
+	background-size: 8.64rem;
+	float: left;
+	margin: 0.26rem 0.1rem 0 0;
+}
+.shenhetongguo{
+	width: 0.35rem;
+	height: 0.33rem;
+	display: block;
+	background: url(img/icon.png) no-repeat -1.44rem -1.44rem;
+	background-size: 8.64rem;
+	float: left;
+	margin: 0.26rem 0.1rem 0 0;
+}
+.shenheshibai{
+	width: 0.35rem;
+	height: 0.33rem;
+	display: block;
+	background: url(img/icon.png) no-repeat -2.88rem -1.44rem;
+	background-size: 8.64rem;
+	float: left;
+	margin: 0.26rem 0.1rem 0 0;
+}
+.footer{
+	width: 7.5rem;
+	height:1.2rem;
+	background: #fff;
+	padding: 0.2rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+ }
+.footer p{
+	width: 6.9rem;
+	height: 0.8rem;
+	background: #083680;
+	color: #fff;
+	text-align: center;
+	line-height: 0.8rem;
+	margin: auto;
+	border-radius: 0.05rem;
+	font-size: 0.36rem;
+	font-weight:200;
+}
+.clear{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.4);
+	display: none;
+}
+.clear_con{
+	padding:0.8rem 0.4rem 0;
+	width: 6.3rem;
+	height: 3.2rem;
+	background: #fff;
+	border-radius: 0.05rem;
+	position: fixed;
+	left: 0.6rem;
+	top:5rem;
+	text-align: center;
+}
+.clear_con p{
+	font-size:0.36rem;
+	color: #333;
+}
+.clear_con button{
+	width: 2.4rem;
+	height: 0.72rem;
+	border: 1px solid #666;
+	border-radius: 0.05rem;
+	background: #fff;
+	font-size: 0.3rem;
+	color: #666;
+}
+.clear_con button:nth-of-type(2){
+	background: #083680;
+	color: #fff;
+}
+/*----------审核页的样式--------*/
+.review{
+	text-align: center;
+}
+.review .icon,.review .shenhetongguo_R{
+	width: 1.44rem;
+	height: 1.44rem;
+	background: url(img/icon.png) no-repeat -1.44rem 0;
+	background-size: 8.64rem;
+	margin:1.2rem auto 0.5rem;
+}
+.review .shenhezhong_R{
+	width: 1.44rem;
+	height: 1.44rem;
+	background: url(img/icon.png) no-repeat 0 0;
+	background-size: 8.64rem;
+	margin:1.2rem auto 0.5rem;
+}
+.review .shenheshibai_R{
+	width: 1.44rem;
+	height: 1.44rem;
+	background: url(img/icon.png) no-repeat -2.88rem 0;
+	background-size: 8.64rem;
+	margin:1.2rem auto 0.5rem;
+}
+.review h4{
+	font-size: 0.42rem;
+	color: #333;
+	margin-bottom: 0.8rem;
+	font-weight: 600;
+}
+.review p{
+	font-size: 0.3rem;
+	color: #333;
+	line-height: 0.5rem;
+}
+.review .repush{
+	border-radius: 0.05rem;
+	width: 5.7rem;
+	height: 0.9rem;
+	text-align: center;
+	line-height: 0.9rem;
+	color: #fff;
+	font-size: 0.36rem;
+	margin: 1.6rem auto 0;
+	background: #083680;
+	font-weight: 200;
+}
+.review button{
+	border: 1px solid #666;
+	border-radius: 0.05rem;
+	width: 5.7rem;
+	height: 0.9rem;
+	text-align: center;
+	line-height: 0.9rem;
+	color: #666;
+	font-size: 0.36rem;
+	margin-top: 0.6rem;
+	background: #fff;
+}
+/*----------详情页的样式--------*/
+.detail>p{
+	width: 100%;
+	height: 1rem;
+	background: rgba(8,54,128,0.1);
+	font-size: 0.36rem;
+	color: #333;
+	line-height: 1rem;
+	padding-left: 0.3rem;
+}
+.detail .basemess{
+	padding-left: 0.3rem;
+}
+.detail .basemess>div{
+	clear: both;
+	width: 100%;
+	height: 0.8rem;
+}
+.detail .basemess input{
+	width: 5.4rem;
+	height: 0.8rem;
+	background: pink;
+}
+.detail .basemess>div{
+	width: 5.4rem;
+	height: 0.8rem;
+	border: 1px solid #999;
+}
+.detail i{
+	font-size: 0.3rem;
+	color: #666;
+	position: relative;
+}
+.detail i span{
+	width: 0.2rem;
+	height: 0.2rem;
+	font-size: 0.2rem;
+	display: block;
+	position: absolute;
+	/*left: 0.9rem;*/
+	right: -0.2rem;
+	top:0;
+}

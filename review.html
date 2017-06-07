@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>店址状态</title>
+    <link rel="stylesheet" type="text/css" href="all.css"/>
+    <script>
+        document.querySelector("html").style.fontSize = document.documentElement.clientWidth/375*50+"px";
+        var url = window.location.search;
+    </script>
+</head>
+<body>
+    <div class="review">
+        <div class="icon"></div>
+        <h4>审核通过</h4>
+        <p class="p1">恭喜，您的店址已成功通过审核！</p>
+        <p class="p2">快去等待一大波的客户来电吧！</p>
+        <a href="detail.html"><div class="repush">重新提交</div></a>
+        <a href="index.html"><button>返回</button></a>
+    </div>
+ <script src="js/zepto.js"></script>
+ <script>
+     url = url[1]; //获取到底址中的状态 1，2，3
+     if(url == 1){   //审核中
+        $(".repush").hide();
+        $(".icon").addClass("shenhezhong_R");
+        $("h4").html("审核中");
+        $(".p1").html("您的店址正在通往审核的路上！");
+        $(".p2").html("工作人员会在1-5个工作日完成审核，请耐心等待！");
+     }else if(url == 2){ //审核通过
+         $(".repush").hide();
+         $(".icon").addClass("shenhetongguo_R");
+     }else{   //审核失败
+         $(".icon").addClass("shenheshibai_R");
+         $("h4").html("审核失败");
+         $(".p1").html("对不起，您的店址审核未通过！");
+         $(".p2").html("原因：您的店址实景图与地址不匹配！");
+     }
+ </script>
+</body>
+</html>
+
