@@ -2,6 +2,7 @@
 	margin:0;
 	padding:0;
 	box-sizing: border-box;
+	font-size: 0.2rem;
 }
 i{
 	font-style: normal;
@@ -12,7 +13,25 @@ li{
 a{
 	text-decoration: none;
 }
-
+em{
+	font-style: normal;
+}
+input {outline:medium;}
+input::-webkit-input-placeholder{
+	color: #999;
+}    /* 使用webkit内核的浏览器 */
+input:-moz-placeholder{
+	color: #999;
+}                  /* Firefox版本4-18 */
+input::-moz-placeholder{
+	color: #999;
+}                  /* Firefox版本19+ */
+input:-ms-input-placeholder{
+	color: #999;
+}
+.clear{
+	clear: both!important;
+}
  /*----------首页的样式--------*/
 .index{
 	background: #fbf8ff;
@@ -233,37 +252,433 @@ a{
 	color: #333;
 	line-height: 1rem;
 	padding-left: 0.3rem;
+	clear: both;
 }
 .detail .basemess{
-	padding-left: 0.3rem;
+	padding: 0.4rem 0.3rem 0;
 }
-.detail .basemess>div{
-	clear: both;
+.detail .basemess>p,.detail .rentmess>p,.detail .peoplemess>p{
 	width: 100%;
 	height: 0.8rem;
+	margin-bottom: 0.4rem;
 }
-.detail .basemess input{
+.detail .em1{
 	width: 5.4rem;
 	height: 0.8rem;
-	background: pink;
-}
-.detail .basemess>div{
-	width: 5.4rem;
-	height: 0.8rem;
+	float: right;
 	border: 1px solid #999;
+	position: relative;
+	color: #999;
 }
-.detail i{
+.detail .em1 input{
+	width: 5.36rem;
+	height: 0.76rem;
+	background: #fff;
+	border: none;
+	text-indent: 0.24rem;
+}
+.detail p i,.i{
 	font-size: 0.3rem;
 	color: #666;
 	position: relative;
+	top:0.2rem;
+	left: 0;
+	float: left;
 }
-.detail i span{
+.detail .basemess ul p{
+	position: relative;
+}
+.detail .basemess ul p span{
 	width: 0.2rem;
 	height: 0.2rem;
 	font-size: 0.2rem;
 	display: block;
 	position: absolute;
-	/*left: 0.9rem;*/
+	right: 0.5rem;
+	top:0;
+}
+.detail .basemess p i span{
+	width: 0.2rem;
+	height: 0.2rem;
+	font-size: 0.2rem;
+	display: block;
+	position: absolute;
 	right: -0.2rem;
 	top:0;
+}
+.detail .basemess p .em3{
+	width: 1.6rem;
+	height: 0.8rem;
+	float: left;
+	border: 1px solid #999;
+	margin-left: 0.3rem;
+	text-indent: 0.24rem;
+	line-height: 0.8rem;
+	color: #999;
+	position: relative;
+}
+.detail .basemess p .em2{
+	width: 2.55rem;
+	height: 0.8rem;
+	border: 1px solid #999;
+	float: left;
+	margin-left: 0.3rem;
+	position: relative;
+}
+.detail .basemess p .em3 span,.detail .basemess p .em1 span{
+	width: 0.2rem;
+	height: 0.15rem;
+	display: block;
+	background: url(img/icon.png) no-repeat 0 -2.88rem;
+	background-size: 8.64rem;
+	position: absolute;
+	right: 0.1rem;
+	top: 0.3rem;
+}
+.detail .basemess p .em11{
+	line-height: 0.8rem;
+	text-indent: 0.24rem;
+}
+.detail .basemess p .em2 input{
+	width: 2.46rem;
+	height: 0.76rem;
+	text-indent: 0.24rem;
+}
+.detail .basemess ul p,.detail .basemess ul li,.detail .projectmess li{
+	width: 2.2rem;
+	height: 0.8rem;
+	float: left;
+	border: 1px solid #999;
+	margin-bottom: 0.15rem;
+}
+.detail .basemess ul p{
+	border: none;
+	font-size: 0.3rem;
+	color: #666;
+}
+.detail .basemess ul li,.detail .projectmess li{
+	text-align: center;
+	line-height: 0.8rem;
+	color: #999;
+	position: relative;
+}
+.detail .basemess ul li i,.detail .projectmess li i{
+	width: 0.32rem;
+	height: 0.3rem;
+	display: block;
+	background: url(img/icon.png) no-repeat -1.44rem -2.88rem;
+	background-size: 8.64rem;
+	position: absolute;
+	top:0.24rem;
+	left: 0.1rem;
+}
+.detail .basemess ul li:nth-of-type(3n+1),.detail .projectmess li:nth-of-type(3n+2){
+	margin: 0 0.15rem 0.15rem;
+}
+.detail .basemess ul li:last-child,.detail .projectmess li:last-child{
+	margin-bottom: 0.4rem;
+}
+.detail .buildmess{
+	padding: 0.4rem 0.3rem 0;
+}
+.detail .buildmess li{
+	width: 3.27rem;
+	height: 0.8rem;
+	color: #999;
+	float: left;
+	margin-bottom: 0.4rem;
+	line-height: 0.76rem;
+}
+.detail .buildmess li i{
+	font-size: 0.3rem;
+	color: #666;
+}
+.detail .buildmess li:nth-of-type(2n+1){
+	margin-right: 0.36rem;
+}
+.detail .buildmess li em{
+	width: 1.28rem;
+	height: 0.8rem;
+	border: 1px solid #999;
+	float: right;
+}
+.detail .buildmess li em input{
+	width: 1.24rem;
+	height: 0.76rem;
+	border: none;
+	text-indent: 0.24rem;
+}
+.detail .rentmess{
+	padding: 0.4rem 0.3rem 0;
+}
+.detail .rentmess ul{
+	height: 3.6rem;
+}
+.detail .rentmess li{
+	width: 3.3rem;
+	height: 0.8rem;
+	color: #999;
+	float: left;
+	margin-bottom: 0.4rem;
+	line-height: 0.76rem;
+}
+.detail .rentmess li i{
+	font-size: 0.3rem;
+	color: #666;
+}
+.detail .rentmess li:nth-of-type(2n+1){
+	margin-right: 0.3rem;
+}
+.detail .rentmess li em{
+	width: 1.3rem;
+	height: 0.8rem;
+	border: 1px solid #999;
+	float: right;
+}
+.detail .rentmess li em input{
+	width: 1.26rem;
+	height: 0.76rem;
+	border: none;
+	text-indent: 0.24rem;
+}
+.detail .projectmess{
+	padding: 0.4rem 0.3rem 0;
+}
+.detail>p>span{
+	font-size: 0.24rem;
+	color: #666;
+	margin-left: 2.5rem;
+}
+.detail .aroundmess{
+	padding: 0.6rem 0.3rem 0;
+}
+
+.detail .aroundmess ul{
+	height: 2.3rem;
+	width: 28rem;
+}
+.detail .aroundmess ul li{
+	width: 1.38rem;
+	height: 100%;
+	float: left;
+	text-align: center;
+}
+.detail .aroundmess ul li i{
+	width: 0.92rem;
+	height: 0.8rem;
+	display: block;
+	background: url(img/icon.png) no-repeat -4.32rem 0;
+	background-size: 8.64rem;
+	margin: 0 auto 0.4rem;
+}
+.detail .aroundmess ul li:nth-of-type(3) i{
+	background: url(img/icon.png) no-repeat -5.76rem 0;
+	background-size: 8.64rem;
+}
+.detail .aroundmess ul li:last-child i{
+	background: url(img/icon.png) no-repeat -7.2rem 0;
+	background-size: 8.64rem;
+}
+.detail .aroundmess ul li h6{
+	color: #999;
+	font-size: 0.24rem;
+	font-weight: 300;
+}
+.detail .aroundmess ul li:nth-of-type(3) h6{
+	color: #083680;
+}
+.detail .aroundmess p{
+	width: 100%;
+	height: 0.8rem;
+	border: 1px solid #999;
+	line-height: 0.8rem;
+	text-indent: 0.24rem;
+	color: #999;
+	margin-bottom: 0.4rem;
+	position: relative;
+}
+.detail .aroundmess p span{
+	width: 0.2rem;
+	height: 0.15rem;
+	display: block;
+	background: url(img/icon.png) no-repeat 0 -2.88rem;
+	background-size: 8.64rem;
+	position: absolute;
+	right: 0.1rem;
+	top: 0.3rem;
+}
+.detail .aroundmess h4{
+	width: 100%;
+	height: 0.8rem;
+	border: 1px solid #999;
+	line-height: 0.8rem;
+	text-indent: 0.24rem;
+	color: #999;
+	margin-bottom: 0.4rem;
+	font-weight: 400;
+}
+.detail .aroundmess button{
+	width: 3.3rem;
+	height: 0.8rem;
+	border: 1px solid #999;
+	text-align: center;
+	line-height: 0.8rem;
+	background: #ffffff;
+	box-sizing: border-box;
+}
+.detail .aroundmess button:nth-of-type(1){
+	border: 1px solid transparent;
+	background: #083680;
+	color: #ffffff;
+	margin:0 0.2rem 0.4rem 0;
+}
+.detail .peoplemess{
+	padding: 0.4rem 0.3rem 0;
+}
+.detail .peoplemess ul{
+	height: 2.4rem;
+}
+.detail .peoplemess li{
+	width: 3.27rem;
+	height: 0.8rem;
+	color: #999;
+	float: left;
+	margin-bottom: 0.4rem;
+	line-height: 0.76rem;
+}
+.detail .peoplemess li i{
+	font-size: 0.3rem;
+	color: #666;
+}
+.detail .peoplemess li:nth-of-type(2n+1){
+	margin-right: 0.36rem;
+}
+.detail .peoplemess li em{
+	width: 1.28rem;
+	height: 0.8rem;
+	border: 1px solid #999;
+	float: right;
+}
+.detail .peoplemess li em input{
+	width: 1.24rem;
+	height: 0.76rem;
+	border: none;
+	text-indent: 0.24rem;
+}
+.detail .imgmess{
+	padding: 0.4rem 0.3rem;
+	overflow: hidden;
+}
+.detail .imgmess .pics{
+	width: 1.6rem;
+	height: 1.6rem;
+	background: url(img/icon.png) no-repeat -2.88rem -2.88rem;
+	background-size: 8.64rem;
+	position: relative;
+	float: left;
+}
+.detail .imgmess .pics input{
+	width: 100%;
+	height:100%;
+	position: absolute;
+	left:0;
+	top:0;
+	opacity: 0;
+}
+.detail .mapmess{
+	width: 100%;
+	height: 0.7rem;
+	padding: 0.4rem 0.3rem 0;
+}
+.detail .mapmess i{
+	width: 0.33rem;
+	height: 0.33rem;
+	display: block;
+	background: url(img/icon.png) no-repeat -7.2rem -1.44rem;
+	background-size: 8.64rem;
+	float: left;
+}
+.detail .mapmess span{
+	color: #999;
+	font-size: 0.24rem;
+	margin-left: 0.2rem;
+}
+.detail>button{
+	width: 6.9rem;
+	height: 0.8rem;
+	background: #083680;
+	color: #ffffff;
+	text-align: center;
+	line-height: 0.8rem;
+	border: none;
+	margin: 0.8rem 0 0.8rem 0.3rem;
+	border-radius: 0.05rem;
+	font-size: 0.36rem;
+}
+.imgmess img{
+	width:1.6rem;
+	height:1.6rem;
+	float:left;
+	margin-right: 0.3rem;
+	margin-bottom: 0.3rem;
+}
+.yb-view{
+	width: 6.9rem;
+	overflow-x: auto;
+}
+.yb-view::-webkit-scrollbar{
+	width:0px
+}
+
+/*---------地图页---------*/
+.map .search{
+	padding: 0.4rem 0.3rem 0;
+	width: 100%;
+	height: 1.6rem;
+	background: #fff;
+}
+.map .search .sousuo{
+	width: 5.46rem;
+	height: 0.8rem;
+	border: 1px solid #666;
+	float: left;
+}
+.map .search .sousuo input{
+	width: 4.8rem;
+	height: 0.76rem;
+	border: none;
+	text-align: center;
+}
+.map .search .sousuo .map_i{
+	width: 0.7rem;
+	height: 0.8rem;
+	float: right;
+	position: relative;
+}
+.map .search .sousuo .map_i i{
+	width:0.45rem;
+	height: 0.45rem;
+	display: block;
+	/*background: url(img/icon.png) no-repeat;
+	background-size: 8.64rem;*/
+	background: pink;
+	position: absolute;
+	top: -0.6rem;
+	right: 0.18rem;
+}
+.map button{
+	width: 1.2rem;
+	height: 0.8rem;
+	background: #083680;
+	color: #fff;
+	text-align: center;
+	line-height: 0.8rem;
+	font-size: 0.24rem;
+	margin-left: 0.2rem;
+	border: none;
+}
+.map .aMap{
+	width: 100%;
+	height: 10.4rem;
+	background: red;
 }
